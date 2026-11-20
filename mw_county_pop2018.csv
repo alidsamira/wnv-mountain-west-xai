@@ -1,0 +1,282 @@
+fips,state,county,pop2018
+04001,AZ,Apache County,71818
+04003,AZ,Cochise County,126770
+04005,AZ,Coconino County,142854
+04007,AZ,Gila County,53889
+04009,AZ,Graham County,38072
+04011,AZ,Greenlee County,9483
+04012,AZ,La Paz County,21098
+04013,AZ,Maricopa County,4410824
+04015,AZ,Mohave County,209550
+04017,AZ,Navajo County,110445
+04019,AZ,Pima County,1039073
+04021,AZ,Pinal County,447138
+04023,AZ,Santa Cruz County,46511
+04025,AZ,Yavapai County,231993
+04027,AZ,Yuma County,212128
+08001,CO,Adams County,511868
+08003,CO,Alamosa County,16683
+08005,CO,Arapahoe County,651215
+08007,CO,Archuleta County,13765
+08009,CO,Baca County,3585
+08011,CO,Bent County,5882
+08013,CO,Boulder County,326078
+08014,CO,Broomfield County,69267
+08015,CO,Chaffee County,20027
+08017,CO,Cheyenne County,1876
+08019,CO,Clear Creek County,9605
+08021,CO,Conejos County,8200
+08023,CO,Costilla County,3828
+08025,CO,Crowley County,5858
+08027,CO,Custer County,4954
+08029,CO,Delta County,30953
+08031,CO,Denver County,716492
+08033,CO,Dolores County,2074
+08035,CO,Douglas County,342776
+08037,CO,Eagle County,54993
+08039,CO,Elbert County,26282
+08041,CO,El Paso County,713856
+08043,CO,Fremont County,48021
+08045,CO,Garfield County,59770
+08047,CO,Gilpin County,6121
+08049,CO,Grand County,15525
+08051,CO,Gunnison County,17246
+08053,CO,Hinsdale County,811
+08055,CO,Huerfano County,6889
+08057,CO,Jackson County,1399
+08059,CO,Jefferson County,580233
+08061,CO,Kiowa County,1383
+08063,CO,Kit Carson County,7163
+08065,CO,Lake County,7824
+08067,CO,La Plata County,56310
+08069,CO,Larimer County,350518
+08071,CO,Las Animas County,14503
+08073,CO,Lincoln County,5610
+08075,CO,Logan County,21528
+08077,CO,Mesa County,153207
+08079,CO,Mineral County,776
+08081,CO,Moffat County,13188
+08083,CO,Montezuma County,26158
+08085,CO,Montrose County,42214
+08087,CO,Morgan County,28558
+08089,CO,Otero County,18432
+08091,CO,Ouray County,4833
+08093,CO,Park County,18556
+08095,CO,Phillips County,4286
+08097,CO,Pitkin County,17950
+08099,CO,Prowers County,12164
+08101,CO,Pueblo County,167529
+08103,CO,Rio Blanco County,6336
+08105,CO,Rio Grande County,11250
+08107,CO,Routt County,25733
+08109,CO,Saguache County,6843
+08111,CO,San Juan County,762
+08113,CO,San Miguel County,8191
+08115,CO,Sedgwick County,2303
+08117,CO,Summit County,31007
+08119,CO,Teller County,25083
+08121,CO,Washington County,4909
+08123,CO,Weld County,314305
+08125,CO,Yuma County,10020
+16001,ID,Ada County,469966
+16003,ID,Adams County,4250
+16005,ID,Bannock County,87138
+16007,ID,Bear Lake County,6050
+16009,ID,Benewah County,9226
+16011,ID,Bingham County,46236
+16013,ID,Blaine County,22601
+16015,ID,Boise County,7634
+16017,ID,Bonner County,44727
+16019,ID,Bonneville County,116854
+16021,ID,Boundary County,11948
+16023,ID,Butte County,2611
+16025,ID,Camas County,1127
+16027,ID,Canyon County,223499
+16029,ID,Caribou County,7060
+16031,ID,Cassia County,23864
+16033,ID,Clark County,852
+16035,ID,Clearwater County,8758
+16037,ID,Custer County,4280
+16039,ID,Elmore County,27259
+16041,ID,Franklin County,13726
+16043,ID,Fremont County,13168
+16045,ID,Gem County,17634
+16047,ID,Gooding County,15196
+16049,ID,Idaho County,16513
+16051,ID,Jefferson County,29439
+16053,ID,Jerome County,24015
+16055,ID,Kootenai County,161505
+16057,ID,Latah County,40134
+16059,ID,Lemhi County,7961
+16061,ID,Lewis County,3861
+16063,ID,Lincoln County,5360
+16065,ID,Madison County,39304
+16067,ID,Minidoka County,20825
+16069,ID,Nez Perce County,40408
+16071,ID,Oneida County,4488
+16073,ID,Owyhee County,11693
+16075,ID,Payette County,23551
+16077,ID,Power County,7768
+16079,ID,Shoshone County,12796
+16081,ID,Teton County,11640
+16083,ID,Twin Falls County,86081
+16085,ID,Valley County,11041
+16087,ID,Washington County,10161
+30001,MT,Beaverhead County,9404
+30003,MT,Big Horn County,13338
+30005,MT,Blaine County,6807
+30007,MT,Broadwater County,6085
+30009,MT,Carbon County,10714
+30011,MT,Carter County,1238
+30013,MT,Cascade County,81643
+30015,MT,Chouteau County,5745
+30017,MT,Custer County,11586
+30019,MT,Daniels County,1747
+30021,MT,Dawson County,8680
+30023,MT,Deer Lodge County,9131
+30025,MT,Fallon County,2920
+30027,MT,Fergus County,11113
+30029,MT,Flathead County,102106
+30031,MT,Gallatin County,111876
+30033,MT,Garfield County,1268
+30035,MT,Glacier County,13747
+30037,MT,Golden Valley County,826
+30039,MT,Granite County,3378
+30041,MT,Hill County,16347
+30043,MT,Jefferson County,12097
+30045,MT,Judith Basin County,1952
+30047,MT,Lake County,30250
+30049,MT,Lewis and Clark County,68700
+30051,MT,Liberty County,2430
+30053,MT,Lincoln County,19794
+30055,MT,McCone County,1675
+30057,MT,Madison County,8768
+30059,MT,Meagher County,1866
+30061,MT,Mineral County,4316
+30063,MT,Missoula County,118791
+30065,MT,Musselshell County,4651
+30067,MT,Park County,16736
+30069,MT,Petroleum County,513
+30071,MT,Phillips County,4074
+30073,MT,Pondera County,5972
+30075,MT,Powder River County,1716
+30077,MT,Powell County,6968
+30079,MT,Prairie County,1087
+30081,MT,Ravalli County,43172
+30083,MT,Richland County,10913
+30085,MT,Roosevelt County,11059
+30087,MT,Rosebud County,9063
+30089,MT,Sanders County,11844
+30091,MT,Sheridan County,3424
+30093,MT,Silver Bow County,34993
+30095,MT,Stillwater County,9534
+30097,MT,Sweet Grass County,3710
+30099,MT,Teton County,6162
+30101,MT,Toole County,4853
+30103,MT,Treasure County,679
+30105,MT,Valley County,7437
+30107,MT,Wheatland County,2236
+30109,MT,Wibaux County,1034
+30111,MT,Yellowstone County,160137
+32001,NV,Churchill County,24440
+32003,NV,Clark County,2231647
+32005,NV,Douglas County,48467
+32007,NV,Elko County,52460
+32009,NV,Esmeralda County,826
+32011,NV,Eureka County,2003
+32013,NV,Humboldt County,16786
+32015,NV,Lander County,5575
+32017,NV,Lincoln County,5201
+32019,NV,Lyon County,55808
+32021,NV,Mineral County,4514
+32023,NV,Nye County,45346
+32027,NV,Pershing County,6666
+32029,NV,Storey County,4029
+32031,NV,Washoe County,465735
+32033,NV,White Pine County,9475
+32510,NV,Carson City,55414
+35001,NM,Bernalillo County,678701
+35003,NM,Catron County,3578
+35005,NM,Chaves County,64689
+35006,NM,Cibola County,26746
+35007,NM,Colfax County,12110
+35009,NM,Curry County,49437
+35011,NM,De Baca County,1781
+35013,NM,Doña Ana County,217522
+35015,NM,Eddy County,57900
+35017,NM,Grant County,27346
+35019,NM,Guadalupe County,4341
+35021,NM,Harding County,655
+35023,NM,Hidalgo County,4240
+35025,NM,Lea County,69611
+35027,NM,Lincoln County,19556
+35028,NM,Los Alamos County,19101
+35029,NM,Luna County,23963
+35031,NM,McKinley County,72290
+35033,NM,Mora County,4506
+35035,NM,Otero County,66781
+35037,NM,Quay County,8253
+35039,NM,Rio Arriba County,39006
+35041,NM,Roosevelt County,18743
+35043,NM,Sandoval County,145179
+35045,NM,San Juan County,125043
+35047,NM,San Miguel County,27591
+35049,NM,Santa Fe County,150056
+35051,NM,Sierra County,10968
+35053,NM,Socorro County,16735
+35055,NM,Taos County,32835
+35057,NM,Torrance County,15591
+35059,NM,Union County,4118
+35061,NM,Valencia County,76456
+49001,UT,Beaver County,6580
+49003,UT,Box Elder County,54950
+49005,UT,Cache County,127068
+49007,UT,Carbon County,20269
+49009,UT,Daggett County,980
+49011,UT,Davis County,351713
+49013,UT,Duchesne County,19964
+49015,UT,Emery County,10014
+49017,UT,Garfield County,5080
+49019,UT,Grand County,9764
+49021,UT,Iron County,52775
+49023,UT,Juab County,11555
+49025,UT,Kane County,7709
+49027,UT,Millard County,13006
+49029,UT,Morgan County,12045
+49031,UT,Piute County,1445
+49033,UT,Rich County,2464
+49035,UT,Salt Lake County,1152633
+49037,UT,San Juan County,15449
+49039,UT,Sanpete County,30623
+49041,UT,Sevier County,21539
+49043,UT,Summit County,41933
+49045,UT,Tooele County,69907
+49047,UT,Uintah County,35438
+49049,UT,Utah County,622213
+49051,UT,Wasatch County,33240
+49053,UT,Washington County,171700
+49055,UT,Wayne County,2690
+49057,UT,Weber County,256359
+56001,WY,Albany County,38601
+56003,WY,Big Horn County,11881
+56005,WY,Campbell County,46140
+56007,WY,Carbon County,14971
+56009,WY,Converse County,13640
+56011,WY,Crook County,7450
+56013,WY,Fremont County,39531
+56015,WY,Goshen County,13376
+56017,WY,Hot Springs County,4555
+56019,WY,Johnson County,8460
+56021,WY,Laramie County,98976
+56023,WY,Lincoln County,19434
+56025,WY,Natrona County,79115
+56027,WY,Niobrara County,2388
+56029,WY,Park County,29324
+56031,WY,Platte County,8566
+56033,WY,Sheridan County,30233
+56035,WY,Sublette County,9813
+56037,WY,Sweetwater County,43051
+56039,WY,Teton County,23081
+56041,WY,Uinta County,20299
+56043,WY,Washakie County,7885
+56045,WY,Weston County,6967

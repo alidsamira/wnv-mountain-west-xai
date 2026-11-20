@@ -1,0 +1,16 @@
+# Large or re-creatable data (see data/input/DATA_SOURCES.md)
+data/raw/
+data/derived/
+data/input/monthly_station_summary.csv
+data/input/daily_*.csv
+*.tif
+
+# Secrets and R session files
+.Renviron
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS files
+.DS_Store
+Thumbs.db
