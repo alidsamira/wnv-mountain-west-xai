@@ -63,7 +63,7 @@ open_nlcd <- function(yr) {
        "unzip it and put the .tif in ", normalizePath(nlcd_dir), ", then run again.")
 }
 
-# ---- Class shares per county --------------------------------------------------
+# ---- Class shares per county -----------------------------------
 extract_year <- function(yr) {
   message("NLCD ", yr)
   r   <- open_nlcd(yr)
