@@ -3,7 +3,7 @@
 # County totals from the 2000, 2010 and 2020 Census tract centers of population
 # (USpopcenters package, no download needed), linearly interpolated between
 # censuses and extended past 2020 with each county's 2010-2020 trend.
-# Your 2018 county file is used as a check.
+# 2018 county file is used as a check.
 # Outputs: data/derived/population_county_year.csv
 #          data/derived/tract_centers.csv (tract points + pop, used for climate)
 # =============================================================================
@@ -25,7 +25,6 @@ write_csv(tracts, file.path(dir_der, "tract_centers.csv"))
 census_pop <- tracts |> group_by(fips, census) |> summarise(pop = sum(pop)) |> ungroup()
 
 # Linear between census points; beyond them, continue the nearest segment's slope.
-# (Broomfield CO did not exist in 2000, so it uses its 2010-2020 trend.)
 interp_pop <- function(x, y, xout) {
   out <- approx(x, y, xout = xout, rule = 2)$y
   n <- length(x)
@@ -41,7 +40,7 @@ pop <- census_pop |>
   group_by(fips) |>
   reframe(year = 2002:2025, pop = interp_pop(census, pop, 2002:2025))
 
-# ---- Check against your 2018 file -------------------------------------------
+# ---- Check against 2018 file -------------------------------------------
 chk <- pop |> filter(year == 2018) |> inner_join(pop18, by = "fips") |>
   mutate(pct_diff = 100 * (pop - pop2018) / pop2018)
 message("2018 interpolated vs your file: median abs. difference ",
