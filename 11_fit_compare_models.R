@@ -62,7 +62,7 @@ ggplot(filter(metrics, counties == "all") |>
   theme_report() + theme(legend.position = "none")
 ggsave(file.path(dir_out, "figures", "model_rmse.png"), width = 8, height = 4)
 
-# ---- 3. Do models rank the surge years as high-risk? (LOYO predictions) ----
+# ---- 3. Do models rank the surge years as high-risk? ----
 yearly <- preds |> filter(scheme == "loyo") |>
   group_by(model, year) |>
   summarise(obs_rate  = sum(neuro_cases) / sum(pop) * 1e5,
@@ -86,7 +86,6 @@ bind_rows(yearly |> transmute(series = model_labels[model], year, rate = pred_ra
 ggsave(file.path(dir_out, "figures", "surge_years.png"), width = 8, height = 4)
 
 # ---- 4. Final model for explanation (trained on all years) -----------------
-# Random forest is the primary model (proposal). Change if XGB clearly wins.
 best_model <- "RF"
 final <- if (best_model == "RF") fit_rf(dat, feats) else fit_xgb(dat, feats)
 saveRDS(list(model = final, type = best_model, feats = feats),
