@@ -14,7 +14,7 @@ xy <- st_as_sf(dat, coords = c("lon", "lat"), crs = 4326, remove = FALSE) |>
   st_transform(crs_albers) |> st_coordinates()
 dat <- dat |> mutate(lon_km = xy[, 1] / 1000, lat_km = xy[, 2] / 1000)
 
-# ---- 1. Collinearity: print every pair with |r| > 0.8 ----------------------
+# 1. Collinearity: print every pair with |r| > 0.8 
 feats_all <- setdiff(feature_names(dat), "county_name")
 num <- dat[, feats_all] |> select(where(is.numeric))
 cm  <- cor(num, use = "pairwise.complete.obs")
@@ -25,15 +25,14 @@ message("Highly correlated pairs (|r| > 0.8) - revise drop_pattern in 00_setup.R
 print(pairs, n = Inf)
 write_csv(pairs, file.path(dir_out, "correlated_pairs.csv"))
 
-# ---- 2. Final feature list --------------------------------------------------
+# 2. Final feature list ---------------------------------------------
 feats <- names(num)[!str_detect(names(num), drop_pattern)]
-# Previous-year case counts are never used (see proposal).
 feats <- feats[!str_detect(feats, "case")]
 dat <- dat |> drop_na(all_of(feats))
 message("Features (", length(feats), "): ", paste(feats, collapse = ", "))
 message("Rows after removing missing values: ", nrow(dat))
 
-# ---- 3. Validation folds ----------------------------------------------------
+# 3. Validation folds -------------------------------------
 # a) temporal: train 2009-2021, test 2022-2025
 # b) spatial blocks: k-means on county centroids -> 10 groups of neighbours
 # c) leave-one-year-out
