@@ -22,10 +22,8 @@ earthdata_user <- Sys.getenv("EARTHDATA_USER", "your_earthdata_user")
 ndvi_dir <- file.path(dir_raw, "ndvi")
 dir.create(ndvi_dir, showWarnings = FALSE, recursive = TRUE)
 
-# ---- 0. Earthdata login ------------------------------------------------------
-# The appeears package's use of the Windows Credential Manager fails
-# ("Element not found"), so the password is kept in memory for this R session
-# only. It is read from EARTHDATA_PASSWORD (set once in .Renviron, see below)
+# 0. Earthdata login ------------------------------------------------------
+# It is read from EARTHDATA_PASSWORD (set once in .Renviron, see below)
 # or asked for in a pop-up.
 if (!nzchar(earthdata_user) || grepl("^your_", earthdata_user))   # placeholder not replaced
   stop("Set earthdata_user (near the top of this script) to your NASA Earthdata username (not email).")
@@ -104,7 +102,7 @@ while (length(todo <- missing_years()) > 0) {
 }
 message("All NDVI years downloaded.")
 
-# ---- 2. County means for each monthly file ---------------------------------
+# 2. County means for each monthly file ---------------------------------
 files <- ndvi_files()
 stopifnot(length(files) > 0)
 
@@ -120,7 +118,7 @@ monthly <- map(files, \(f) {
          ndvi = exact_extract(r, cty, "mean", progress = FALSE))
 }) |> bind_rows()
 
-# ---- 3. Seasonal means and anomalies ---------------------------------------
+# 3. Seasonal means and anomalies ---------------------------------------
 ndvi <- monthly |>
   mutate(season = case_when(month %in% 4:6 ~ "ndvi_spring",
                             month %in% 7:9 ~ "ndvi_summer")) |>
