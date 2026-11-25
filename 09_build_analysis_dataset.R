@@ -32,7 +32,7 @@ dat <- expand_grid(fips = location$fips, year = years) |>
 if ("irrigated_share" %in% names(dat))
   dat <- mutate(dat, irrigated_share = replace_na(irrigated_share, 0))
 
-# ---- Quick checks -----------------------------------------------------------
+# Quick checks 
 stopifnot(nrow(dat) == 281 * length(years))
 message("Rows: ", nrow(dat), " | Neuroinvasive cases 2009-2025: ", sum(dat$neuro_cases))
 message("Share of county-years with zero cases: ", round(mean(dat$neuro_cases == 0), 3))
