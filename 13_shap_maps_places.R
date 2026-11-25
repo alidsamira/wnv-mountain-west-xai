@@ -4,10 +4,7 @@
 #   1. Maps of county mean SHAP for key variables
 #   2. Utah vs Arizona dependence plots for summer temperature
 #   3. SHAP-value slopes by state for the benchmark variables, compared with
-#      the earlier statistical results:
-#        - irrigated plains = high risk
-#        - wetter springs raise risk region-wide (RR 1.12 per SD)
-#        - hotter summers raise risk in Utah (RR 1.80 per SD)
+#      the earlier statistical results
 # =============================================================================
 source("00_setup.R")
 library(patchwork)
