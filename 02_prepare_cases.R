@@ -23,11 +23,11 @@ cases <- raw |>
   complete(fips = pop18$fips, year = 2002:2025,
            fill = list(total_cases = 0, neuro_cases = 0))
 
-# ---- Checks against the proposal -------------------------------------------
+# ---- Checks -------------------------------------------
 message("Counties: ", n_distinct(cases$fips), " | rows: ", nrow(cases))
 message("Total human cases 2002-2025: ", sum(cases$total_cases), " (proposal: 15,786)")
 ut <- cases |> filter(str_starts(fips, "49"), year %in% c(2017, 2025)) |>
   group_by(year) |> summarise(neuro = sum(neuro_cases))
-print(ut)   # proposal: 39 neuroinvasive cases in both years
+print(ut)  
 
 write_csv(cases, file.path(dir_der, "cases_county_year.csv"))
