@@ -2,11 +2,12 @@
 # 04_climate_county_year.R  -  PIPELINE: station climate -> county-year climate
 # Input : stations_mountain_west.csv, monthly_station_summary.csv (GHCN-Daily),
 #         tract_centers.csv from 03_population_annual.R
-# Steps : 1. station-year seasonal values (only complete seasons)
-#         2. each census tract gets an inverse-distance-weighted value from its
-#            5 nearest stations reporting that year (within 150 km)
-#         3. county value = population-weighted mean of its tracts
-#         4. normals (2002-2025 county mean), same-year and previous-year anomalies
+# Steps:  
+# 1. station-year seasonal values (only complete seasons)
+# 2. each census tract gets an inverse-distance-weighted value from its
+# 5 nearest stations reporting that year (within 150 km)
+# 3. county value = population-weighted mean of its tracts
+# 4. normals (2002-2025 county mean), same-year and previous-year anomalies
 # Output: data/derived/climate_county_year.csv
 # =============================================================================
 source("00_setup.R")
@@ -20,7 +21,7 @@ monthly  <- read_csv(file_monthly, show_col_types = FALSE) |>
 tracts   <- read_csv(file.path(dir_der, "tract_centers.csv"),
                      col_types = cols(fips = "c", tract = "c"))
 
-# ---- 1. Seasonal values per station-year ------------------------------------
+# 1. Seasonal values per station-year ------------------
 # A month counts only with >= 20 days of data; counts (GDD, heat days) are
 # scaled up to the full month. A season needs every one of its months.
 monthly <- monthly |>
@@ -51,7 +52,7 @@ station_year <- pmap(specs, \(var, col, months, fun, ok) {
     mutate(var = var)
 }) |> bind_rows() |> ungroup()
 
-# ---- 2. Tract values by inverse-distance weighting --------------------------
+# 2. Tract values by inverse-distance weighting -----------------
 to_xy <- function(d) st_as_sf(d, coords = c("lon", "lat"), crs = 4326) |>
   st_transform(crs_albers) |> st_coordinates()
 st_xy <- to_xy(stations)
@@ -77,13 +78,13 @@ tract_values <- map(c(2000, 2010, 2020), \(cen) {
     mutate(fips = tr$fips[tid], pop = tr$pop[tid])
 }) |> bind_rows()
 
-# ---- 3. Population-weighted county means ------------------------------------
+# 3. Population-weighted county means ------------------------------------
 county <- tract_values |>
   group_by(fips, year, var) |>
   summarise(value = weighted.mean(value, pop)) |>
   ungroup()
 
-# ---- 4. Normals and anomalies -----------------------------------------------
+# 4. Normals and anomalies ------------------------------------
 climate <- county |>
   group_by(fips, var) |>
   mutate(norm = mean(value[year >= 2002], na.rm = TRUE),
