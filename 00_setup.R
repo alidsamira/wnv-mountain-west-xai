@@ -1,8 +1,5 @@
 # =============================================================================
 # 00_setup.R  -  Shared settings, packages and helper functions
-# Project: Explaining West Nile Virus Risk in the Mountain West with XAI
-#
-# Every other script starts with source("00_setup.R").
 # Edit the PATHS and INPUT FILES sections to match your computer.
 # =============================================================================
 
@@ -54,7 +51,6 @@ file_monthly  <- file.path(dir_in, "monthly_station_summary.csv")      # station
 # (the daily_XX.csv files are not needed: the monthly summary is built from them)
 
 # ---- Collinear variables to DROP before modelling ---------------------------
-# Summer temperature, heat days and GDD are r = 0.81-0.93: keep one per group.
 # Regular expression; default keeps mean summer temperature and drops the rest.
 # 10_prepare_features.R prints every pair with |r| > 0.8 so you can revise it.
 drop_pattern <- "^(heat_days|gdd|tmax_summer)_|^tmean_spring_norm$"
